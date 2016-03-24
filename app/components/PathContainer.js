@@ -2,6 +2,8 @@ import React from 'react';
 
 import _ from 'underscore';
 import Header from './Header';
+import PlayerSelectContainer from './PlayerSelectContainer';
+import CourtContainer from './CourtContainer';
 import StatsContainer from './StatsContainer';
 
 export default class PathContainer extends React.Component{
@@ -123,6 +125,27 @@ export default class PathContainer extends React.Component{
 
   render() {
     this.computeSelectedData();
+    const mainContent = (function() {
+      if (this.state.selectNewPlayer) {
+        return (
+          <PlayerSelectContainer
+            triggerPlayerChange={this.handlePlayerChange}
+            width={this.props.width} 
+            height={this.props.width / 1.88} />
+        );
+      } else {
+        return (
+          <CourtContainer
+            canvasData={this._selectedData}
+            gridClick={this.gridClick}
+            selectedGrids={this.state.gridSel}
+            onOffense={this.state.offDef == 'Off'}
+            width={this.props.width} 
+            height={this.props.width / 1.88}
+            tooltipState={this.props.tooltipState} />
+        );
+      }
+    }.bind(this))();
 
     return (
       <div className="path-container col-sm-8 col-sm-offset-2">
@@ -132,6 +155,9 @@ export default class PathContainer extends React.Component{
           selectNewPlayer={this.state.selectNewPlayer}
           offDef={this.state.offDef}
           toggleOffDef={this.toggleOffDef} />
+        <div className='row main-content'>
+          {mainContent}
+        </div>
         <StatsContainer
           width={this.props.width}
           selectNewPlayer={this.state.selectNewPlayer}
