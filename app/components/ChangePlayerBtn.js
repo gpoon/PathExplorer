@@ -1,6 +1,12 @@
 import React from 'react';
 
 export default class ChangePlayerBtn extends React.Component{
+  constructor(props) {
+    super(props);
+    
+    this.handleClick = this.handleClick.bind(this);
+  }
+
   handleClick(e) {
     e.preventDefault();
     this.props.showPlayerSelect();

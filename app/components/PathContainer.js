@@ -1,6 +1,7 @@
 import React from 'react';
+import filter from 'lodash.filter';
+import isEqual from 'lodash.isequal';
 
-import _ from 'underscore';
 import Header from './Header';
 import PlayerSelectContainer from './PlayerSelectContainer';
 import CourtContainer from './CourtContainer';
@@ -42,7 +43,7 @@ export default class PathContainer extends React.Component{
   filterData() {
     this._made = 0;
     this._histogramDat = [];
-    return _.filter(this.props.allData, function(poss) {
+    return filter(this.props.allData, function(poss) {
       if (this.passFilter(poss)) {
         if (poss.made) this._made += 1;
         this._histogramDat.push(poss.t);
@@ -80,7 +81,7 @@ export default class PathContainer extends React.Component{
   }
 
   setGridSel(coords) {
-    var newGridSel = _.isEqual(this.state.gridSel, [coords]) ? [] : [coords];
+    var newGridSel = isEqual(this.state.gridSel, [coords]) ? [] : [coords];
     this.setState({gridSel: newGridSel});
   }
 

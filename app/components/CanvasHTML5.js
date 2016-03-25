@@ -21,7 +21,7 @@ export default class CanvasHTML5 {
     this._n = data.length;
     this._canvas.clearRect(0, 0, this._canvas.canvas.width, this._canvas.canvas.height)
     this._opacity = this._strokeOpacity(this._n);
-    this._canvas.strokeStyle = 'rgba(0,0,0,' + this._opacity + ')';
+    this._canvas.strokeStyle = 'rgba(255,255,255,' + this._opacity + ')';
     this._render();
   }
 

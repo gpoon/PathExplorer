@@ -1,8 +1,9 @@
 import React from 'react';
-
 import $ from 'jquery';
 import d3 from 'd3';
 import d3_queue from 'd3-queue';
+
+import LoadOverlay from './LoadOverlay';
 import PathContainer from './PathContainer';
 
 export default class PlayerContainer extends React.Component{
@@ -20,6 +21,8 @@ export default class PlayerContainer extends React.Component{
     this.triggerPlayerChange = this.triggerPlayerChange.bind(this);
     this.handleTooltipClick = this.handleTooltipClick.bind(this);
     this.incrementTooltipState = this.incrementTooltipState.bind(this);
+
+    document.cookie = 'visitedPathExplorer=1';
   }
 
   scalePath(scale, d) {
@@ -100,8 +103,10 @@ export default class PlayerContainer extends React.Component{
   }
 
   render() {
+    const overlay = this.state.tooltipState === 8 ? false : <LoadOverlay />
     return (
       <div className="player-container container-fluid">
+        {overlay}
         <PathContainer
           width={this._contentWidth}
           player={this.state.player}

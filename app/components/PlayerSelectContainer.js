@@ -1,8 +1,9 @@
 import React from 'react';
-
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import d3_queue from 'd3-queue';
 import d3 from 'd3';
 import lunr from 'lunr';
+
 import SearchFilters from './SearchFilters';
 import SelectionContainer from './SelectionContainer';
 
