@@ -99,6 +99,7 @@ body {
 
 .change-player-btn {
 	opacity: 0.8;
+  content: url('../imgs/change-player.svg');
 }
 
 .change-player-btn:hover,

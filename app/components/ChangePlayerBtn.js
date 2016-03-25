@@ -18,7 +18,6 @@ export default class ChangePlayerBtn extends React.Component{
       <div className='col-lg-3 change-player-container'>
         <img
           className={'change-player-btn' + classStr}
-          src='/imgs/change-player.svg'
           onClick={this.handleClick} />
       </div>
     );
