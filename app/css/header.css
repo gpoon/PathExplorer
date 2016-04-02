@@ -1,0 +1,118 @@
+.page-title.selected {
+  opacity: 1;
+}
+
+.player-container,
+.path-container {
+  padding: 0;
+}
+
+.header {
+  margin: 0;
+  padding: 3px 0 5px 0;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+}
+
+.change-player-btn {
+  content: url(../imgs/change-player.svg);
+  opacity: 0.8;
+}
+
+.change-player-btn:hover,
+.change-player-btn.selecting-player {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.player-title {
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.player-title h1 {
+  border: 0;
+  color: #FFF;
+  font: 3.2em 'Decima Regular';
+  opacity: 0.8;
+}
+
+.player-title.selecting-player h1 {
+  opacity: 0.32;
+}
+
+.change-player-container {
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.offdef-tgl-group {
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  justify-content: flex-end;
+  padding: 0;
+}
+
+.offdef-tgl-group.selecting-player {
+  opacity: 0.32;
+}
+
+.offdef-tgl-btn {
+  border: 1px #979797 solid;
+  color: rgba(255,255,255,0.4);
+  font: 1.07em/1 'Decima Bold';
+  opacity: 0.9;
+  padding: 9px 13px 6px 13px;
+  text-align: center;
+}
+
+.offdef-tgl-btn:hover {
+  color: white;
+  cursor: pointer;
+  background-color: rgba(255,255,255, 0.7);
+}
+
+.offdef-tgl-btn.tgl-selected {
+  background-color: rgba(255,255,255, 0.33);
+  color: #FFF;
+}

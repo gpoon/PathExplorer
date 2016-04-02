@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class TeamContainer extends React.Component{
+export default class PlayerName extends React.Component{
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);

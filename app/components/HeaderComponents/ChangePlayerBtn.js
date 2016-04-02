@@ -15,7 +15,7 @@ export default class ChangePlayerBtn extends React.Component{
   render() {
     const classStr = this.props.selectNewPlayer ? ' selecting-player' : '';
     return (
-      <div className='col-lg-3 change-player-container'>
+      <div className='col-sm-3 change-player-container'>
         <img
           className={'change-player-btn' + classStr}
           onClick={this.handleClick} />

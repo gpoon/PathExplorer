@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class LoadDialog extends React.Component{
+export default class ModalDialog extends React.Component{
   constructor(props) {
     super(props);
     this.handleDialogClick = this.handleDialogClick.bind(this);
@@ -18,7 +18,7 @@ export default class LoadDialog extends React.Component{
 
   render() {
     return (
-      <div className='load-dialog' onClick={this.handleDialogClick} >
+      <div className='modal-dialog-custom' onClick={this.handleDialogClick} >
         <div className='dialog-header'>
           PATH EXPLORER
         </div>

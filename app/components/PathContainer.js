@@ -2,10 +2,10 @@ import React from 'react';
 import filter from 'lodash.filter';
 import isEqual from 'lodash.isequal';
 
-import Header from './Header';
-import PlayerSelectContainer from './PlayerSelectContainer';
-import CourtContainer from './CourtContainer';
-import StatsContainer from './StatsContainer';
+import Header from './HeaderComponents/Header';
+import PlayerSelectContainer from './SelectionComponents/PlayerSelectContainer';
+import CourtContainer from './CourtComponents/CourtContainer';
+import StatsContainer from './StatsComponents/StatsContainer';
 
 export default class PathContainer extends React.Component{
   constructor(props) {

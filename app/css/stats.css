@@ -1,0 +1,53 @@
+.stats-container {
+  color: #FFF;
+  margin: 0;
+  opacity: 0.8;
+  padding-top: 25px;
+  position: relative;
+}
+
+.stats-container.selecting-player {
+  opacity: 0.32;
+}
+
+.stats-group {
+  opacity: 0.8;
+  padding: 0;
+  text-align: center;
+  width: 21%;
+}
+
+.stats-num {
+  font: 2.27em 'Decima Bold';
+  padding-top: 13px;
+}
+
+.stats-txt {
+  font: 1.2em/1 'Decima Light';
+}
+
+.histogram-container {
+  padding: 0;
+  text-align: center;
+  width: 58%;
+}
+
+.axis path, .axis line {
+  fill: none;
+  shape-rendering: crispEdges;
+  stroke: #FFF;
+}
+
+.histogram .tick text {
+  font: 0.875em 'Decima Light';
+}
+
+.hist-bar {
+  fill: #FFF;
+  shape-rendering: crispEdges;
+}
+
+.histogram text {
+  fill: #FFF;
+  opacity: 0.8;
+}

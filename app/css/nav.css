@@ -1,0 +1,62 @@
+.navbar {
+  background-color: black;
+  border: none;
+  border-radius: 0;
+  font-family: 'Decima Bold';
+  margin: 0;
+  opacity: 0.8;
+}
+
+.navbar.mouseOver {
+  opacity: 1;
+}
+
+.navbar-brand {
+  left: 0;
+  margin: auto;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+
+.navbar-brand.page-title {
+  color: #459ABB;
+  float: none;
+  font-size: 1.07em;
+  opacity: 0.75;
+}
+
+.navbar-brand.page-title:hover {
+  color: #459ABB;
+  cursor: default;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #459ABB;
+  opacity: .75;
+}
+
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #459ABB;
+  opacity: 1;
+}
+
+.show-nav-menu {
+  background-color: #1A3E4D;
+  color: #FFF;
+  display: inline-block;
+  font: 19px 'Decima Bold';
+  padding: 7px 0 7px 0;
+}
+
+.nav-dropdown-item {
+  padding: 15px 20px 14px 20px;
+}
+
+.nav-dropdown-item:hover {
+  background-color: #2D6C85;
+  cursor: pointer;
+}

@@ -1,0 +1,24 @@
+.main-content {
+  margin: 0;
+}
+
+.court-container {
+  padding: 0;
+  position: relative;
+  text-align: center;
+}
+
+.court-interactives {
+  position: absolute;
+}
+
+.court-grid,
+.court-canvas {
+  position: absolute;
+  shape-rendering: crispEdges;
+  vertical-align: top;
+}
+
+.court-grid {
+  z-index: 1;
+}

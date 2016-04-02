@@ -1,0 +1,103 @@
+.modal-overlay {
+  background-color: rgba(0,0,0,0.7);
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  width: 100%;
+  z-index: 1000;
+ }
+
+.modal-dialog-custom {
+  background-color: #327894;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+ }
+
+.modal-dialog-custom .dialog-header {
+  color: rgba(255,255,255,0.95);
+  font: 3.2em 'Decima Bold';
+  padding: 110px 200px 70px 200px;
+ }
+
+.modal-dialog-custom .dialog-body {
+  color: rgba(255,255,255,0.8);
+  font-size: 1.33em;
+  line-height: 2;
+  padding: 0 30px 70px 30px;
+}
+
+.modal-dialog-custom .dialog-footer {
+  background-color: #1D4657;
+  padding: 30px 45px 30px 0;
+  text-align: right;
+}
+
+.dialog-footer .dialog-close-btn {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  color: rgba(255,255,255,0.8);
+  font: 1.6em 'Decima Bold';
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.dialog-footer .dialog-close-btn:hover {
+  background-color: rgba(255,255,255,0.7);
+  box-shadow: 0 2px 4px 0 #000;
+  color: black;
+  cursor: pointer;
+}
+
+.modal-dialog-custom .about-dialog-header {
+  color: rgba(255,255,255,0.95);
+  font: 2.5em 'Decima Bold';
+  padding: 40px 0 10px 0;
+  text-align: center;
+}
+
+.modal-dialog-custom .dialog-subheader {
+  font: 1.2em/2.6 'Decima Bold';
+  text-align: left;
+}
+
+.about-dialog-body {
+  color: rgba(255,255,255,0.8);
+  font: 1.1em/1.2 'Decima Light';
+  padding: 0 60px 0 60px;
+  text-align: left;
+}
+
+.about-dialog-body p {
+  text-indent: 30px;
+}
+
+.about-dialog-body a {
+  color: #FFF;
+}
+
+.about-dialog-footer {
+  padding: 15px 45px 30px 0;
+  text-align: right;
+}
+
+.about-dialog-footer .dialog-close-btn {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  color: rgba(255,255,255,0.8);
+  font: 1.3em 'Decima Regular';
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.about-dialog-footer .dialog-close-btn:hover {
+  background-color: rgba(255,255,255,0.7);
+  box-shadow: 0 2px 4px 0 #000;
+  color: black;
+  cursor: pointer;
+}

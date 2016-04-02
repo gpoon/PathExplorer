@@ -2,7 +2,7 @@ import React from 'react';
 import d3 from 'd3';
 import d3_queue from 'd3-queue';
 
-import LoadOverlay from './LoadOverlay';
+import ModalOverlay from './ModalComponents/ModalOverlay';
 import PathContainer from './PathContainer';
 
 export default class PlayerContainer extends React.Component{
@@ -102,7 +102,7 @@ export default class PlayerContainer extends React.Component{
   }
 
   render() {
-    const overlay = this.state.tooltipState === 8 ? false : <LoadOverlay />
+    const overlay = this.state.tooltipState === 8 ? false : <ModalOverlay />
     return (
       <div className="player-container container-fluid">
         {overlay}

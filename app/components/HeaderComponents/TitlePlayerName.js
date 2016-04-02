@@ -5,7 +5,7 @@ export default class TitlePlayerName extends React.Component{
     const classStr = this.props.selectNewPlayer ? ' selecting-player' : '';
     return (
       <div
-        className={'col-lg-6 player-title' + classStr}>
+        className={'col-sm-6 player-title' + classStr}>
         <h1>
           {this.props.player.toUpperCase()}
         </h1>

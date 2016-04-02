@@ -6,7 +6,7 @@ export default class OffDefToggle extends React.Component{
   render() {
     var classStr = this.props.selectNewPlayer ? ' selecting-player' : '';
     return (
-      <div className={'col-lg-3 offdef-tgl-group' + classStr}>
+      <div className={'col-sm-3 offdef-tgl-group' + classStr}>
         <OffDefToggleBtn
           selected={this.props.offDef == 'Off'}
           toggleOffDef={this.props.toggleOffDef} >

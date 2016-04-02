@@ -1,6 +1,6 @@
 import React from 'react';
 
-import LoadSpinner from './LoadSpinner';
+import LoadSpinner from '../LoadComponents/LoadSpinner';
 
 export default class PossessionsFG extends React.Component{
   render() {
@@ -17,7 +17,7 @@ export default class PossessionsFG extends React.Component{
     }.bind(this))();
 
     return (
-      <div className="col-lg-2 stats-group">
+      <div className="col-sm-2 stats-group">
         <div className='stats-num'>
           {content}
         </div>

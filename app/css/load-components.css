@@ -1,0 +1,37 @@
+.loader-spiral {
+  animation: rotate 2s linear infinite;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  transform-origin: center center;
+}
+
+@keyframes rotate {
+ 100%{
+  transform: rotate(360deg);
+ }
+}
+
+.loader-path {
+  animation: dash 1.5s ease-in-out infinite;
+  stroke: rgba(255,255,255,0.8);
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+}
+
+@keyframes dash {
+ 0% {
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+ }
+ 50% {
+  stroke-dasharray: 89,200;
+  stroke-dashoffset: -35px;
+ }
+ 100% {
+  stroke-dasharray: 89,200;
+  stroke-dashoffset: -124px;
+ }
+}

@@ -7,7 +7,7 @@ export default class HistogramContainer extends React.Component{
     const width = this.props.width * 0.55;
     const height = width * 0.22;
     return (
-      <div className='col-lg-8 histogram-container'>
+      <div className='col-sm-8 histogram-container'>
         <Histogram
           width={width}
           height={height}

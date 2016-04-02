@@ -1,0 +1,84 @@
+.court-load-overlay {
+  background-color: #000;
+  opacity: 0.7;
+}
+
+rect.trav-box {
+  fill-opacity: 0;
+  stroke: #FFF;
+  stroke-width: 0;
+}
+
+.court-grid:hover .trav-box.selected {
+  stroke: #D81A00;
+  stroke-width: 3;
+}
+
+.trav-box.hovered {
+  cursor: pointer;
+  stroke-width: 3;
+}
+
+.trav-box.tooltip-highlight,
+.court-grid:hover .trav-box.tooltip-highlight:hover  {
+  stroke: #FFD671;
+  stroke-width: 3;
+}
+
+.tooltip-instructions {
+  background-color: #327894;
+  padding: 20px;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.tooltip-instructions:after {
+  border: 15px solid rgba(50, 120, 148, 0);
+  border-right-color: #327894;
+  content: " ";
+  height: 0;
+  margin-top: -15px;
+  pointer-events: none;
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  width: 0;
+}
+
+.tooltip-txt {
+  color: #FFF;
+  font-size: 1.33em;
+}
+
+.court-background-container {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.court-background {
+  background: #021B26 url(../imgs/fullcourt.svg) 100%/100% no-repeat;
+  box-shadow: 0 0 100px 0px #1C4456;
+}
+
+.basket {
+  position: absolute;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.basket.offense-court {
+  background: url(../imgs/offense-basket.svg);
+}
+
+.basket.defense-court {
+  background: url(../imgs/defense-basket.svg);
+}
+
+@media (min-width: 800px) and (max-width: 1280px) {
+  .court-grid:hover .trav-box.selected,
+  .trav-box.hovered,
+  .trav-box.tooltip-highlight,
+  .court-grid:hover .trav-box.tooltip-highlight:hover  {
+    stroke-width: 2;
+  }
+}

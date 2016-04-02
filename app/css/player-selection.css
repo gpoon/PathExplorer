@@ -1,0 +1,106 @@
+.player-select-container {
+  background-color: #1D4657;
+  box-shadow: 0 0 50px 0 #000;
+  display: inline-block;
+  padding: 25px 60px 30px 60px;
+  text-align: left;
+}
+
+.search-filters {
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.search-bar {
+  color: white;
+  background-color: #1D4657;
+  border: none;
+  border-bottom: 2px #50BDEA solid;
+  font: 1.2em/normal 'Decima Regular';
+  margin-right: 20px;
+  opacity: 0.8;
+  vertical-align: middle;
+}
+
+.search-bar::-webkit-input-placeholder {
+  color: gray;
+  -webkit-text-fill-color: initial;
+  text-shadow: none;
+}
+
+.search-bar:focus {
+  outline: none;
+}
+
+.position-tgl-group {
+  box-shadow: 0 1px 2px 0 #000;
+  vertical-align: top;
+}
+
+.btn.position-tgl-btn {
+  background-color: #BFBFBF;
+  border: none;
+  border-radius: 0;
+  font: 0.875em 'Decima Regular';
+  padding: 5px 20px 1px 20px;
+  opacity: 0.8;
+}
+
+.btn.position-tgl-btn:focus {
+  outline: none;
+}
+
+.btn.position-tgl-btn:hover,
+.btn.position-tgl-btn.active {
+  background-color: #638694;
+  color: white;
+}
+
+.selection-container-padding {
+  background-color: #327894;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.5);
+  padding: 20px;
+}
+
+.selection-container {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.selection-container::-webkit-scrollbar {
+  background-color: rgba(255,255,255,0.7);
+  width: 10px;
+}
+
+.selection-container::-webkit-scrollbar-thumb {
+  background-color: #44A2C9;
+}
+
+.team-container {
+  line-height: 2;
+  padding-bottom: 20px;
+}
+
+.team-name {
+  color: rgba(255,255,255,0.7);
+  font: 1.2em 'Decima Bold';
+  padding-left: 12px;
+  padding-bottom: 5px;
+}
+
+.team-name:hover {
+  cursor: default;
+}
+
+.player-name {
+  font: 1.03em 'Decima Regular';
+  line-height: inherit;
+  margin-right: 15px;
+  padding-left: 12px;
+}
+
+.player-name:hover {
+  background-color: rgba(255,255,255,0.7);
+  box-shadow: 0 1px 2px 0 #000;
+  cursor: pointer;
+}

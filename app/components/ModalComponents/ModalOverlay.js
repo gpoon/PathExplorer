@@ -1,8 +1,8 @@
 import React from 'react';
 
-import LoadDialog from './LoadDialog';
+import ModalDialog from './ModalDialog';
 
-export default class LoadOverlay extends React.Component{
+export default class ModalOverlay extends React.Component{
   constructor(props) {
     super(props);
     this.state = {visibility: 'visible'};
@@ -16,10 +16,10 @@ export default class LoadOverlay extends React.Component{
   render() {
     return (
       <div
-        className='load-overlay'
+        className='modal-overlay'
         style={{visibility: this.state.visibility}}
         onClick={this.handleClick} >
-        <LoadDialog btnClick={this.handleClick} />
+        <ModalDialog btnClick={this.handleClick} />
       </div>
     );
   }

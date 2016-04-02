@@ -1,12 +1,12 @@
 import React from 'react';
 
-import SelectPlayerName from './SelectPlayerName';
+import PlayerName from './PlayerName';
 
 export default class TeamContainer extends React.Component{
   render() {
     const PlayerNames = this.props.players.map(function(player, i) {
       return (
-        <SelectPlayerName
+        <PlayerName
           key={i}
           name={player.name}
           playerClick={this.props.playerClick} />

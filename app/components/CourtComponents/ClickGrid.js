@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ClickRect from './ClickRect';
-import TooltipInstructions from './TooltipInstructions';
+import TooltipInstructions from '../TooltipInstructions';
 
 export default class ClickGrid extends React.Component {
   constructor(props) {

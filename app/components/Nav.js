@@ -1,15 +1,64 @@
 import React from 'react';
 
+import AboutModal from './ModalComponents/AboutModal';
+
 export default class Nav extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      highlight: false,
+      showMenu: false
+    };
+
+    this.handleMouseOver = this.handleMouseOver.bind(this);
+    this.handleMouseOut = this.handleMouseOut.bind(this);
+    this.handleMenuClick = this.handleMenuClick.bind(this);
+    this.showAbout = this.showAbout.bind(this);
+  }
+
+  handleMouseOver() {
+    this.setState({highlight: true});
+  }
+
+  handleMouseOut() {
+    this.setState({highlight: false});
+  }
+
+  handleMenuClick() {
+    this.setState({showMenu: !this.state.showMenu});
+  }
+
+  showAbout() {
+    this.setState({showMenu: false});
+    this.props.showAbout();
+  }
+
   render() {
+    const navStyle = 'navbar navbar-default' + (this.state.highlight || this.state.showMenu ? ' mouseOver' : '');
+    const dropdownStyle = 'dropdown-menu' + (this.state.showMenu ? ' show-nav-menu' : '');
+
     return (
-      <nav className='navbar navbar-default'>
-        <div className='container'>
-          <div className='navbar-header navbar-center'>
-            <p className='navbar-text page-title'>
-              PATH EXPLORER
-            </p>
-          </div>
+      <nav
+        className={navStyle}
+        onMouseOver={this.handleMouseOver}
+        onMouseOut={this.handleMouseOut}
+      >
+        <span className='navbar-brand page-title'>PATH EXPLORER</span>
+        <div className='collapse navbar-collapse'>
+          <ul className='nav navbar-nav navbar-left'>
+            <li>
+              <a href='#' onClick={this.handleMenuClick}>
+                <span className='glyphicon glyphicon-menu-hamburger' />
+              </a>
+              <ul className={dropdownStyle}>
+                <li
+                  className='nav-dropdown-item'
+                  onClick={this.showAbout}>
+                  ABOUT
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </nav>
     );

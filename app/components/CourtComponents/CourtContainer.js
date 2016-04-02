@@ -1,6 +1,6 @@
 import React from 'react';
 
-import LoadSpinner from './LoadSpinner';
+import LoadSpinner from '../LoadComponents/LoadSpinner';
 import Canvas from './Canvas';
 import ClickGrid from './ClickGrid';
 import CourtBackground from './CourtBackground';
@@ -33,7 +33,7 @@ export default class CourtContainer extends React.Component{
     }.bind(this))();
 
     return (
-      <div className='col-lg-12 court-container'>
+      <div className='col-sm-12 court-container'>
         <Canvas
           canvasData={this.props.canvasData}
           width={this.props.width}
