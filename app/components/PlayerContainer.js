@@ -8,7 +8,7 @@ import PathContainer from './PathContainer';
 export default class PlayerContainer extends React.Component{
   constructor(props) {
     super(props);
-    this._contentWidth = window.innerWidth * 0.6667;
+    this._contentWidth = window.innerWidth * 8 / 12;
     this.state = {
       player: 'Marc Gasol',
       allData: null,

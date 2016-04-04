@@ -17,7 +17,7 @@ export default class HistogramContainer extends React.Component{
     var width = node.parentNode.offsetWidth;
     this._histogram = new HistogramD3(node,
       width,
-      110,
+      window.innerWidth > 1440 ? 110 : 90,
       this.props.histogramData
     );
   }

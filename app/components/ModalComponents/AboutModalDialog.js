@@ -19,9 +19,6 @@ export default class AboutModalDialog extends React.Component{
   render() {
     return (
       <div className='modal-dialog-custom' onClick={this.handleDialogClick} >
-        <div className='about-dialog-header'>
-          ABOUT
-        </div>
         <div className='about-dialog-body'>
           <div className='dialog-subheader'>
             What is this?
