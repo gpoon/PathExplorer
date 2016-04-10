@@ -24,7 +24,7 @@ export default class AboutModalDialog extends React.Component{
             What is this?
           </div>
           <p>
-            This is an interactive visualization of SportVU data collected from the first half of the 2015-2016 NBA season through <a href='/stats.nba.com'>stats.nba.com</a>. SportVU tracks where players and the basketball are located on the court during games. For each possession a player (or the ball) participated in, a white line is drawn on the court to represent his movement. You can see how many possessions are drawn from the number on the left below the court. Next to that, you can see the percentage of those possessions that resulted in a field goal (regardless of whether the player attempted it) and a histogram of when the possessions happened during games.
+            This is an interactive visualization of SportVU data collected from the first half of the 2015-2016 NBA season through <a href="http://stats.nba.com" onClick={function(){window.open('http://stats.nba.com')}}>stats.nba.com</a>. SportVU tracks where players and the basketball are located on the court during games. For each possession a player (or the ball) participated in, a white line is drawn on the court to represent his movement. You can see how many possessions are drawn from the number on the left below the court. Next to that, you can see the percentage of those possessions that resulted in a field goal (regardless of whether the player attempted it) and a histogram of when the possessions happened during games.
           </p>
           <div className='dialog-subheader'>
             How does this work?
