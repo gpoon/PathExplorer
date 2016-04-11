@@ -33,8 +33,8 @@ export default class PlayerSelectContainer extends React.Component{
   }
 
   _getTeamPlayerData() {
-    const teamPath = './data/teams.json';
-    const playerPath = './data/players.json';
+    const teamPath = '/static/data/teams.json';
+    const playerPath = '/static/data/players.json';
     d3_queue.queue()
       .defer(d3.json, teamPath)
       .defer(d3.json, playerPath)
@@ -42,7 +42,7 @@ export default class PlayerSelectContainer extends React.Component{
         this._allTeams = teams;
         this._allPlayers = players;
 
-        this._setupLunr(players);              
+        this._setupLunr(players);
         this.setState({selectedPlayers: players});
       }.bind(this));
   }

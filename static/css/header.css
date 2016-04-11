@@ -22,7 +22,7 @@
 }
 
 .change-player-btn {
-  content: url(../imgs/change-player.svg);
+  content: url(/static/imgs/change-player.svg);
   opacity: 0.8;
 }
 

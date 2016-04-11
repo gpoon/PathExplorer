@@ -47,7 +47,7 @@ export default class PlayerContainer extends React.Component{
   }
 
   getAllData() {
-    var path = './data/marc_compressed_combined.json';
+    var path = '/static/data/marc_compressed_combined.json';
     d3_queue.queue()
       .defer(d3.json, path)
       .await(function(err, json) {
@@ -85,7 +85,7 @@ export default class PlayerContainer extends React.Component{
       case 1:
       case 2:
         if (x === 17 && y === 2 && shiftDown) {
-         this.incrementTooltipState(3000); 
+         this.incrementTooltipState(3000);
         }
         break;
       default:

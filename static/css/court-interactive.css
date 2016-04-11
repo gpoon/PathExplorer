@@ -56,7 +56,7 @@ rect.trav-box {
 }
 
 .court-background {
-  background: #021B26 url(../imgs/fullcourt.svg) 100%/100% no-repeat;
+  background: #021B26 url(/static/imgs/fullcourt.svg) 100%/100% no-repeat;
   box-shadow: 0 0 100px 0px #1C4456;
 }
 
@@ -67,11 +67,11 @@ rect.trav-box {
 }
 
 .basket.offense-court {
-  background: url(../imgs/offense-basket.svg);
+  background: url(/static/imgs/offense-basket.svg);
 }
 
 .basket.defense-court {
-  background: url(../imgs/defense-basket.svg);
+  background: url(/static/imgs/defense-basket.svg);
 }
 
 @media (min-width: 800px) and (max-width: 1280px) {
