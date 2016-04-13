@@ -18,12 +18,17 @@ export default class ModalDialog extends React.Component{
 
   render() {
     const header = (function() {
-      if (this.props.tooltipState === 0) {
-        return (
-          <div className='dialog-header'>HOW DO NBA PLAYERS MOVE ON THE COURT?</div>
-        );
-      } else {
-        return false;
+      switch (this.props.tooltipState) {
+        case 0:
+          return (
+            <div className='dialog-header'>HOW DO NBA PLAYERS MOVE ON THE COURT?</div>
+          );
+        case 9:
+          return (
+            <div className='dialog-header'>OTHER FUNCTIONS</div>
+          );
+        default:
+          return false;
       }
     }.bind(this))();
 
@@ -32,28 +37,38 @@ export default class ModalDialog extends React.Component{
         case 0:
           return (
             <div className='dialog-body'>
-              <p>This visualization shows NBA players’ movements on the court from the 2015-16 season.</p>
-              <p>Each line on the court is a player’s positions during <span className='decima-bold'>one possession</span>.</p>
-              <p><span className='decima-bold'>SEE</span> how many possessions each player had, how many resulted in a field goal for their team, and when these possessions happened during games.</p>
-              <p><span className='decima-bold'>SEARCH</span> for your favorite player.</p>
+              <p>This visualization shows NBA players’ movements on the court from the first half of the 2015-16 season.</p>
             </div>
           );
-        case 3:
+        case 2:
+          return (
+            <div className='dialog-body'>
+              <p>Each line on the court is a player’s positions during <span className='decima-bold'>one possession</span>.</p>
+            </div>
+          );
+        case 4:
           return (
             <div className='dialog-body'>
               <p>You will now see <span className='decima-bold'>ONLY</span> possessions where the player passed through the selected square.</p>
             </div>
           );
-        case 5:
+        case 6:
           return (
             <div className='dialog-body'>
               <p>Now only possessions where the player passed through <span className='decima-bold'>BOTH</span> squares will be shown.</p>
             </div>
           );
-        case 7:
+        case 8:
           return (
             <div className='dialog-body'>
               <p>You are now <span className='decima-bold'>BACK</span> to one square of selection.</p>
+            </div>
+          );
+        case 9:
+          return (
+            <div className='dialog-body'>
+              <p><span className='decima-bold'>SEE</span> stats on these possessions below the court.</p>
+              <p><span className='decima-bold'>SEARCH</span> your favorite player from the magnifying glass in the top left.</p>
             </div>
           );
         default:
@@ -61,7 +76,16 @@ export default class ModalDialog extends React.Component{
       }
     }.bind(this))();
 
-    const closeBtnText = this.props.tooltipState === 0 ? 'EXPLORE PLAYER PATHS' : 'CLOSE';
+    const closeBtnText = (function() {
+      switch (this.props.tooltipState) {
+        case 0:
+          return 'EXPLORE PLAYER PATHS';
+        case 9:
+          return 'END WALKTHROUGH';
+        default:
+          return 'CLOSE';
+      }
+    }.bind(this))();
 
     return (
       <div className='modal-dialog-custom' onClick={this.handleDialogClick} >

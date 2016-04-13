@@ -12,11 +12,11 @@ export default class ClickGrid extends React.Component {
 
   _tooltipHighlight(i, j) {
     switch (this.props.tooltipState) {
-      case 2:
-        return i === 12 && j === 5;
-      case 4:
-      case 6:
-        return i === 17 && j === 2;
+      case 3:
+        return i === 12 && j === 5 && this.props.hasData;
+      case 5:
+      case 7:
+        return i === 17 && j === 2 && this.props.hasData;
       default:
         return false;
     }
@@ -60,6 +60,7 @@ export default class ClickGrid extends React.Component {
         </svg>
         <TooltipInstructions
           tooltipState={this.props.tooltipState}
+          hasData={this.props.hasData}
           rectWidth={_rectWidth}
           rectHeight={_rectHeight} />
       </div>

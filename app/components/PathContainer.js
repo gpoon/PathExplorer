@@ -55,7 +55,7 @@ export default class PathContainer extends React.Component{
   }
 
   gridClick(x, y, shiftDown) {
-    if (this.props.tooltipState !== 0) {
+    if (this.props.tooltipState > 1) {
       var coords = '(' + x + ', ' + y + ')';
       if (!shiftDown) {
         this.setGridSel(coords);
@@ -101,15 +101,15 @@ export default class PathContainer extends React.Component{
   }
 
   getNumPossessions() {
-    return (this._selectedData === null) ? null : this._selectedData.length;
+    return this._selectedData ? this._selectedData.length : null;
   }
 
   getFGPercent() {
-    return (this._selectedData === null) ? null : Math.round(this._made / this._selectedData.length * 100) + '%';
+    return this._selectedData ? Math.round(this._made / this._selectedData.length * 100) + '%' : null;
   }
 
   getHistogramData() {
-    return this._histogramDat;
+    return this._selectedData ? this._histogramDat : null;
   }
 
   toggleOffDef() {
@@ -146,7 +146,7 @@ export default class PathContainer extends React.Component{
             onOffense={this.state.offDef == 'Off'}
             width={this.props.width} 
             height={this.props.width / 1.88}
-            startTooltip={this.props.startTooltip}
+            incrementIntro={this.props.incrementIntro}
             tooltipState={this.props.tooltipState} />
         );
       }
@@ -168,7 +168,8 @@ export default class PathContainer extends React.Component{
           selectNewPlayer={this.state.selectNewPlayer}
           numPossessions={this.getNumPossessions()}
           fGPercent={this.getFGPercent()}
-          histogramData={this.getHistogramData()} />
+          histogramData={this.getHistogramData()}
+          tooltipState={this.props.tooltipState} />
       </div>
     );
   }

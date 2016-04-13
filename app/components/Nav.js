@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 import AboutModal from './ModalComponents/AboutModal';
 
@@ -13,6 +14,7 @@ export default class Nav extends React.Component {
     this.handleMouseOver = this.handleMouseOver.bind(this);
     this.handleMouseOut = this.handleMouseOut.bind(this);
     this.handleMenuClick = this.handleMenuClick.bind(this);
+    this.goToAbout = this.goToAbout.bind(this);
   }
 
   handleMouseOver() {
@@ -25,6 +27,10 @@ export default class Nav extends React.Component {
 
   handleMenuClick() {
     this.setState({showMenu: !this.state.showMenu});
+  }
+
+  goToAbout() {
+
   }
 
   render() {
@@ -41,12 +47,12 @@ export default class Nav extends React.Component {
         <div className='collapse navbar-collapse'>
           <ul className='nav navbar-nav navbar-left'>
             <li>
-              <a href='#' onClick={this.handleMenuClick}>
+              <a onClick={this.handleMenuClick}>
                 <span className='glyphicon glyphicon-menu-hamburger' />
               </a>
               <ul className={dropdownStyle}>
-                <li className='nav-dropdown-item' >
-                  ABOUT
+                <li className='nav-dropdown-item' onClick={this.goToAbout} >
+                  <a href='#about'>ABOUT</a>
                 </li>
               </ul>
             </li>

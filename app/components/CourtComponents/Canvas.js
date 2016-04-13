@@ -1,16 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import d3_queue from 'd3-queue';
 
 import CanvasHTML5 from './CanvasHTML5';
 
 export default class Canvas extends React.Component{
-  constructor() {
-    super();
-
+  constructor(props) {
+    super(props);
     this._new = true;
+    this._block = false;
+
     this.componentDidMount = this.componentDidMount.bind(this);
     this.componentDidUpdate = this.componentDidUpdate.bind(this);
+    this.allowUpdate = this.allowUpdate.bind(this);
   }
 
   componentDidMount() {
@@ -18,22 +19,28 @@ export default class Canvas extends React.Component{
       ReactDOM.findDOMNode(this),
       this.props.width,
       this.props.height,
-      this.props.canvasData
+      this.props.canvasData,
+      this.allowUpdate
     );
   }
 
+  allowUpdate() {
+    this._new = false;
+  }
+
   componentDidUpdate() {
-    if (this.props.canvasData && this.props.tooltipState > 0) {
-      if (!this._new || this.props.tooltipState > 7) {
-        this._canvas.update(this.props.canvasData);
-      } else {
-        this._canvas.drawFirst(this.props.canvasData, this.props.showTooltip);
-        this._new = false;
+    if (this._new) {
+      if (this.props.tooltipState > 0 && !this._block) {
+        this._canvas.drawFirst(this.props.canvasData, this.props.incrementIntro);
+        this._block = true;
       }
+    } else {
+      this._canvas.update(this.props.canvasData);
     }
   }
-  
+
   render() {
+    console.log('canvas render')
     return (
       <canvas className='court-canvas' />
     );

@@ -61,6 +61,10 @@
   cursor: pointer;
 }
 
+.dialog-footer .dialog-close-btn:focus {
+  outline: none;
+}
+
 .modal-dialog-custom .about-dialog-header {
   color: rgba(255,255,255,0.95);
   font: 2.5em 'Decima Bold';

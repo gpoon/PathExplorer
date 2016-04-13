@@ -36,7 +36,7 @@ export default class CourtContainer extends React.Component{
       <div className='col-sm-12 court-container'>
         <Canvas
           canvasData={this.props.canvasData}
-          showTooltip={this.props.startTooltip}
+          incrementIntro={this.props.incrementIntro}
           tooltipState={this.props.tooltipState}
           width={this.props.width}
           height={this.props.height} />
@@ -46,6 +46,7 @@ export default class CourtContainer extends React.Component{
           selectedGrids={this.props.selectedGrids}
           width={this.props.width}
           height={this.props.height}
+          hasData={this.props.canvasData && this.props.canvasData.length > 1}
           tooltipState={this.props.tooltipState} />
         <CourtBackground
           onOffense={this.props.onOffense}
