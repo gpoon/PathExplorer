@@ -10,17 +10,17 @@ export default class TooltipInstructions extends React.Component {
   _getProperties(state) {
     var prop = {};
     switch (state) {
-      case 0:
+      case 2:
         prop.text = 'CLICK THIS SQUARE';
         prop.x = this.props.rectWidth * 13 + 20;
         prop.y = this.props.rectHeight * 5 - (60 - this.props.rectHeight) / 2;
         break;
-      case 1:
+      case 4:
         prop.text = 'HOLD SHIFT AND CLICK THIS SQUARE';
         prop.x = this.props.rectWidth * 18 + 20;
         prop.y = this.props.rectHeight * 2 - (60 - this.props.rectHeight) / 2;
         break;
-      case 2:
+      case 6:
         prop.text = 'HOLD SHIFT AND CLICK THIS SQUARE AGAIN';
         prop.x = this.props.rectWidth * 18 + 20;
         prop.y = this.props.rectHeight * 2 - (60 - this.props.rectHeight) / 2;
@@ -37,7 +37,7 @@ export default class TooltipInstructions extends React.Component {
   render() {
     const tooltipProps = this._getProperties(this.props.tooltipState);
     const styleDict = {
-      'opacity': this.props.tooltipState < 3 ? 1 : 0,
+      'opacity': [2, 4, 6].indexOf(this.props.tooltipState) > -1 ? 1 : 0,
       'top': tooltipProps.y,
       'left': tooltipProps.x
     };

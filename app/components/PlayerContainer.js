@@ -12,7 +12,7 @@ export default class PlayerContainer extends React.Component{
     this.state = {
       player: 'Marc Gasol',
       allData: null,
-      tooltipState: document.cookie.indexOf('visitedPathExplorer') >= 0 ? 8 : 9
+      tooltipState: document.cookie.indexOf('visitedPathExplorer') > -1 ? 8 : 0
     };
 
     this.getAllData = this.getAllData.bind(this);
@@ -57,12 +57,6 @@ export default class PlayerContainer extends React.Component{
         }.bind(this))
         this.setState({allData: data});
 
-        if (this.state.tooltipState === 9) {
-          setTimeout(function() {
-            this.setState({tooltipState: 0})
-          }.bind(this), 5000);
-        }
-
       }.bind(this));
   }
 
@@ -77,15 +71,15 @@ export default class PlayerContainer extends React.Component{
 
   handleTooltipClick(x, y, shiftDown) {
     switch (this.state.tooltipState) {
-      case 0:
+      case 2:
         if (x === 12 && y === 5) {
-          this.incrementTooltipState(3500);
+          this.incrementTooltipState();
         }
         break;
-      case 1:
-      case 2:
+      case 4:
+      case 6:
         if (x === 17 && y === 2 && shiftDown) {
-         this.incrementTooltipState(3000);
+         this.incrementTooltipState();
         }
         break;
       default:
@@ -93,16 +87,25 @@ export default class PlayerContainer extends React.Component{
     }
   }
 
-  incrementTooltipState(delay) {
+  incrementTooltipState() {
     var curState = this.state.tooltipState;
-    this.setState({tooltipState: 9});
-    setTimeout(function() {
-      this.setState({tooltipState: curState + 1});
-    }.bind(this), delay);
+    this.setState({tooltipState: curState + 1});
   }
 
   render() {
-    const overlay = this.state.tooltipState === 8 ? false : <ModalOverlay />
+    const overlay = (function() {
+      switch (this.state.tooltipState) {
+        case 8:
+          return false;
+        default:
+          return (
+            <ModalOverlay
+              tooltipState={this.state.tooltipState}
+              incrementTooltipState={this.incrementTooltipState} />
+          );
+      }
+    }.bind(this))();
+
     return (
       <div className="player-container container-fluid">
         {overlay}
@@ -111,6 +114,7 @@ export default class PlayerContainer extends React.Component{
           player={this.state.player}
           allData={this.state.allData}
           triggerPlayerChange={this.triggerPlayerChange}
+          startTooltip={this.incrementTooltipState}
           tooltipState={this.state.tooltipState}
           handleTooltipClick={this.handleTooltipClick} />
       </div>

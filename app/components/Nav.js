@@ -13,7 +13,6 @@ export default class Nav extends React.Component {
     this.handleMouseOver = this.handleMouseOver.bind(this);
     this.handleMouseOut = this.handleMouseOut.bind(this);
     this.handleMenuClick = this.handleMenuClick.bind(this);
-    this.showAbout = this.showAbout.bind(this);
   }
 
   handleMouseOver() {
@@ -26,11 +25,6 @@ export default class Nav extends React.Component {
 
   handleMenuClick() {
     this.setState({showMenu: !this.state.showMenu});
-  }
-
-  showAbout() {
-    this.setState({showMenu: false});
-    this.props.showAbout();
   }
 
   render() {
@@ -51,9 +45,7 @@ export default class Nav extends React.Component {
                 <span className='glyphicon glyphicon-menu-hamburger' />
               </a>
               <ul className={dropdownStyle}>
-                <li
-                  className='nav-dropdown-item'
-                  onClick={this.showAbout}>
+                <li className='nav-dropdown-item' >
                   ABOUT
                 </li>
               </ul>

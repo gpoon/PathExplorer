@@ -12,10 +12,10 @@ export default class ClickGrid extends React.Component {
 
   _tooltipHighlight(i, j) {
     switch (this.props.tooltipState) {
-      case 0:
-        return i === 12 && j === 5;
-      case 1:
       case 2:
+        return i === 12 && j === 5;
+      case 4:
+      case 6:
         return i === 17 && j === 2;
       default:
         return false;

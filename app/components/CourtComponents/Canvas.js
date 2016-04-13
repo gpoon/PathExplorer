@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import d3_queue from 'd3-queue';
 
 import CanvasHTML5 from './CanvasHTML5';
 
@@ -22,14 +23,13 @@ export default class Canvas extends React.Component{
   }
 
   componentDidUpdate() {
-    if (this.props.canvasData) {
-      var pause = this._new ? 350 : 0;
-      setTimeout(function() {
-          this._canvas.update(this.props.canvasData)
-        }.bind(this), pause);
-      this._new = false;
-    } else {
-      this._new = true;
+    if (this.props.canvasData && this.props.tooltipState > 0) {
+      if (!this._new || this.props.tooltipState > 7) {
+        this._canvas.update(this.props.canvasData);
+      } else {
+        this._canvas.drawFirst(this.props.canvasData, this.props.showTooltip);
+        this._new = false;
+      }
     }
   }
   

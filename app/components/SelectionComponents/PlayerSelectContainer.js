@@ -103,7 +103,8 @@ export default class PlayerSelectContainer extends React.Component{
           width={this.props.width * 0.3}
           onSearchInput={this.handleSearchInput}
           onFilter={this.handlePositionFilter}
-          filteredPosition={this._positionFilter} />
+          filteredPosition={this._positionFilter}
+          showPlayerChange={this.props.showPlayerChange} />
         <SelectionContainer
           height={this.props.height}
           teams={this._allTeams}

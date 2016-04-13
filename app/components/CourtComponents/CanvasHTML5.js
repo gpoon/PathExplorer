@@ -11,6 +11,7 @@ export default class CanvasHTML5 {
       .clamp(true);
 
     this.update = this.update.bind(this);
+    this.drawFirst = this.drawFirst.bind(this);
     this._render = this._render.bind(this);
 
     if (data) this.update(data);
@@ -19,10 +20,48 @@ export default class CanvasHTML5 {
   update(data) {
     this._data = data;
     this._n = data.length;
-    this._canvas.clearRect(0, 0, this._canvas.canvas.width, this._canvas.canvas.height)
+    this._canvas.clearRect(0, 0, this._canvas.canvas.width, this._canvas.canvas.height);
     this._opacity = this._strokeOpacity(this._n);
+    this._canvas.lineWidth = 1;
     this._canvas.strokeStyle = 'rgba(255,255,255,' + this._opacity + ')';
     this._render();
+  }
+
+  drawFirst(data, callback) {
+    this._canvas.clearRect(0, 0, this._canvas.canvas.width, this._canvas.canvas.height);
+    this._opacity = this._strokeOpacity(1);
+    this._canvas.lineWidth = 2;
+
+    var reM = /M(\d+),(\d+)/;
+    var reC = /(\d+),(\d+),(\d+),(\d+),(\d+),(\d+)/;
+    var splitStr = data[0].p.split("C");
+
+    var newP = 'M' + reM.exec(splitStr[0])
+      .slice(1)
+      .join(',');
+
+    var i = 1;
+    (function loop(canvas, update, callback) {
+      setTimeout(function() {
+        newP += 'C' + reC.exec(splitStr[i])
+          .slice(1)
+          .join(',');
+
+        let p = new Path2D(newP);
+        canvas.clearRect(0, 0, canvas.canvas.width, canvas.canvas.height);
+        canvas.strokeStyle = 'rgb(255,255,255)';
+        canvas.stroke(p);
+        i++;
+        if (i < splitStr.length) {
+          loop(canvas, update, callback);
+        } else {
+          update(data);
+          setTimeout(function(){
+            callback();
+          }, 1250);
+        }
+      }, 120);
+    })(this._canvas, this.update, callback);
   }
 
   _render() {

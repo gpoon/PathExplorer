@@ -2,7 +2,7 @@
   background-color: rgba(0,0,0,0.7);
   height: 100%;
   left: 0px;
-  position: absolute;
+  position: fixed;
   text-align: center;
   top: 0px;
   width: 100%;
@@ -15,19 +15,27 @@
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
+  width: 830px;
  }
 
 .modal-dialog-custom .dialog-header {
   color: rgba(255,255,255,0.95);
-  font: 3.2em 'Decima Bold';
-  padding: 110px 200px 70px 200px;
+  font: 2.4em 'Decima Bold';
+  padding-top: 110px;
  }
 
 .modal-dialog-custom .dialog-body {
   color: rgba(255,255,255,0.8);
   font-size: 1.33em;
-  line-height: 2;
-  padding: 0 30px 70px 30px;
+  padding: 90px 57px 50px 57px;
+}
+
+.dialog-body p {
+  padding: 0.5em 0 0.5em 0;
+}
+
+.decima-bold {
+  font-family: 'Decima Bold';
 }
 
 .modal-dialog-custom .dialog-footer {

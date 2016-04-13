@@ -55,17 +55,19 @@ export default class PathContainer extends React.Component{
   }
 
   gridClick(x, y, shiftDown) {
-    var coords = '(' + x + ', ' + y + ')';
-    if (!shiftDown) {
-      this.setGridSel(coords);
-    } else {
-      if (this.state.gridSel.indexOf(coords) === -1) {
-        this.addGridSel(coords);
+    if (this.props.tooltipState !== 0) {
+      var coords = '(' + x + ', ' + y + ')';
+      if (!shiftDown) {
+        this.setGridSel(coords);
       } else {
-        this.removeGridSel(coords);
-      } 
+        if (this.state.gridSel.indexOf(coords) === -1) {
+          this.addGridSel(coords);
+        } else {
+          this.removeGridSel(coords);
+        } 
+      }
+      this.props.handleTooltipClick(x, y, shiftDown);
     }
-    this.props.handleTooltipClick(x, y, shiftDown);
   }
 
   addGridSel(coords) {
@@ -131,6 +133,7 @@ export default class PathContainer extends React.Component{
         return (
           <PlayerSelectContainer
             triggerPlayerChange={this.handlePlayerChange}
+            showPlayerChange={this.showPlayerChange}
             width={this.props.width} 
             height={this.props.width / 1.88} />
         );
@@ -143,6 +146,7 @@ export default class PathContainer extends React.Component{
             onOffense={this.state.offDef == 'Off'}
             width={this.props.width} 
             height={this.props.width / 1.88}
+            startTooltip={this.props.startTooltip}
             tooltipState={this.props.tooltipState} />
         );
       }

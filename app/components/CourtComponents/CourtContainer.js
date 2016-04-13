@@ -36,6 +36,8 @@ export default class CourtContainer extends React.Component{
       <div className='col-sm-12 court-container'>
         <Canvas
           canvasData={this.props.canvasData}
+          showTooltip={this.props.startTooltip}
+          tooltipState={this.props.tooltipState}
           width={this.props.width}
           height={this.props.height} />
         {CourtSpinner}

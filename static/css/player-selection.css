@@ -6,6 +6,15 @@
   text-align: left;
 }
 
+.close-btn {
+  content: url(/static/imgs/close-btn.svg);
+  float: right;
+}
+
+.close-btn:hover {
+  cursor: pointer;
+}
+
 .search-filters {
   margin: 0;
   padding-bottom: 20px;
