@@ -9,7 +9,7 @@
   z-index: 1000;
  }
 
-.modal-dialog-custom {
+.modal-dialog {
   background-color: #327894;
   left: 50%;
   position: absolute;
@@ -18,19 +18,20 @@
   width: 830px;
  }
 
-.modal-dialog-custom .dialog-header {
+.modal-dialog .dialog-header {
   color: rgba(255,255,255,0.95);
   font: 2.4em 'Decima Bold';
-  padding-top: 110px;
+  padding-top: 80px;
  }
 
-.modal-dialog-custom .dialog-body {
+.modal-dialog .dialog-body {
   color: rgba(255,255,255,0.8);
   font-size: 1.33em;
-  padding: 90px 57px 50px 57px;
+  padding: 60px 57px 50px 57px;
 }
 
 .dialog-body p {
+  line-height: 1.6;
   padding: 0.5em 0 0.5em 0;
 }
 
@@ -38,9 +39,9 @@
   font-family: 'Decima Bold';
 }
 
-.modal-dialog-custom .dialog-footer {
+.modal-dialog .dialog-footer {
   background-color: #1D4657;
-  padding: 30px 45px 30px 0;
+  padding: 25px 45px 25px 0;
   text-align: right;
 }
 
@@ -63,53 +64,4 @@
 
 .dialog-footer .dialog-close-btn:focus {
   outline: none;
-}
-
-.modal-dialog-custom .about-dialog-header {
-  color: rgba(255,255,255,0.95);
-  font: 2.5em 'Decima Bold';
-  padding: 40px 0 10px 0;
-  text-align: center;
-}
-
-.modal-dialog-custom .dialog-subheader {
-  font: 1.2em/2.6 'Decima Bold';
-  text-align: left;
-}
-
-.about-dialog-body {
-  color: rgba(255,255,255,0.8);
-  font: 1.1em/1.2 'Decima Light';
-  padding: 50px 60px 0 60px;
-  text-align: left;
-}
-
-.about-dialog-body p {
-  text-indent: 30px;
-}
-
-.about-dialog-body a {
-  color: #FFF;
-}
-
-.about-dialog-footer {
-  padding: 15px 45px 30px 0;
-  text-align: right;
-}
-
-.about-dialog-footer .dialog-close-btn {
-  background-color: transparent;
-  border: none;
-  border-radius: 0;
-  color: rgba(255,255,255,0.8);
-  font: 1.3em 'Decima Regular';
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.about-dialog-footer .dialog-close-btn:hover {
-  background-color: rgba(255,255,255,0.7);
-  box-shadow: 0 2px 4px 0 #000;
-  color: black;
-  cursor: pointer;
 }

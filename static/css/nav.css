@@ -32,11 +32,14 @@
   cursor: default;
 }
 
+.nav .glyphicon-menu-hamburger:hover {
+  cursor: pointer;
+}
+
 .navbar-default .navbar-nav > li > a {
   color: #459ABB;
   opacity: .75;
 }
-
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {

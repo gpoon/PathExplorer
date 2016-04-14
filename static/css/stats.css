@@ -6,6 +6,10 @@
   position: relative;
 }
 
+.stats-container:hover {
+  cursor: default;
+}
+
 .stats-container.selecting-player {
   opacity: 0.32;
 }

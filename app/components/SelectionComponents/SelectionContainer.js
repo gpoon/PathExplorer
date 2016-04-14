@@ -12,7 +12,7 @@ export default class SelectionContainer extends React.Component{
             dict[team.name] = []
           })
         }
-        
+
         this.props.players.forEach(function(player) {
           if (dict[player.team] !== undefined) {
             dict[player.team].push(player);

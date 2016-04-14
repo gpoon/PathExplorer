@@ -37,7 +37,7 @@ export default class ModalDialog extends React.Component{
         case 0:
           return (
             <div className='dialog-body'>
-              <p>This visualization shows NBA players’ movements on the court from the first half of the 2015-16 season.</p>
+              <p>This interactive visualization shows NBA players’ movements on the court from the first half of the 2015-16 season.</p>
             </div>
           );
         case 2:
@@ -68,7 +68,7 @@ export default class ModalDialog extends React.Component{
           return (
             <div className='dialog-body'>
               <p><span className='decima-bold'>SEE</span> stats on these possessions below the court.</p>
-              <p><span className='decima-bold'>SEARCH</span> your favorite player from the magnifying glass in the top left.</p>
+              <p><span className='decima-bold'>SEARCH</span> for your favorite player from the magnifying glass on the top left.</p>
             </div>
           );
         default:
@@ -88,7 +88,7 @@ export default class ModalDialog extends React.Component{
     }.bind(this))();
 
     return (
-      <div className='modal-dialog-custom' onClick={this.handleDialogClick} >
+      <div className='modal-dialog' onClick={this.handleDialogClick} >
         {header}
         {body}
         <div className='dialog-footer'>

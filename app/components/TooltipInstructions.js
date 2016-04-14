@@ -14,19 +14,19 @@ export default class TooltipInstructions extends React.Component {
         prop.text = 'CLICK THIS SQUARE';
         prop.x = this.props.rectWidth * 13 + 20;
         prop.y = this.props.rectHeight * 5 - (60 - this.props.rectHeight) / 2;
-        prop.opacity = this.props.hasData ? 1 : 0;
+        prop.opacity = this.props.showTooltip ? 1 : 0;
         break;
       case 5:
         prop.text = 'HOLD SHIFT + CLICK';
         prop.x = this.props.rectWidth * 18 + 20;
         prop.y = this.props.rectHeight * 2 - (60 - this.props.rectHeight) / 2;
-        prop.opacity = this.props.hasData ? 1 : 0;
+        prop.opacity = this.props.showTooltip ? 1 : 0;
         break;
       case 7:
         prop.text = 'HOLD SHIFT AND CLICK THIS SQUARE AGAIN';
         prop.x = this.props.rectWidth * 18 + 20;
         prop.y = this.props.rectHeight * 2 - (60 - this.props.rectHeight) / 2;
-        prop.opacity = this.props.hasData ? 1 : 0;
+        prop.opacity = this.props.showTooltip ? 1 : 0;
         break;
       default:
         prop.text = '';

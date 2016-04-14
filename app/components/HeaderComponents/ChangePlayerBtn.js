@@ -3,7 +3,7 @@ import React from 'react';
 export default class ChangePlayerBtn extends React.Component{
   constructor(props) {
     super(props);
-    
+
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -11,7 +11,7 @@ export default class ChangePlayerBtn extends React.Component{
     e.preventDefault();
     this.props.showPlayerSelect();
   }
-  
+
   render() {
     const classStr = this.props.selectNewPlayer ? ' selecting-player' : '';
     return (

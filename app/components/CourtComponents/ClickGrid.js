@@ -6,19 +6,36 @@ import TooltipInstructions from '../TooltipInstructions';
 export default class ClickGrid extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {showTooltip: true};
+    this.prev_state = 0;
 
     this._tooltipHighlight = this._tooltipHighlight.bind(this);
+    this.rectClicked = this.rectClicked.bind(this);
   }
 
   _tooltipHighlight(i, j) {
     switch (this.props.tooltipState) {
       case 3:
-        return i === 12 && j === 5 && this.props.hasData;
+        return i === 12 && j === 5 && this.state.showTooltip;
       case 5:
       case 7:
-        return i === 17 && j === 2 && this.props.hasData;
+        return i === 17 && j === 2 && this.state.showTooltip;
       default:
         return false;
+    }
+  }
+
+  rectClicked(x, y, shiftDown) {
+    this.props.clickHandler(x, y, shiftDown);
+    if (this.props.tooltipState < 10) {
+      this.setState({showTooltip: false});
+    }
+  }
+
+  componentDidUpdate() {
+    if (this.props.tooltipState < 10 && this.prev_state !== this.props.tooltipState) {
+      this.setState({showTooltip: true});
+      this.prev_state = this.props.tooltipState;
     }
   }
 
@@ -44,7 +61,7 @@ export default class ClickGrid extends React.Component {
           height={_rectHeight}
           x={obj.x}
           y={obj.y}
-          onClick={this.props.clickHandler}
+          onClick={this.rectClicked}
           selected={obj.selected}
           tooltipHighlight={obj.highlight} />
       );
@@ -60,7 +77,7 @@ export default class ClickGrid extends React.Component {
         </svg>
         <TooltipInstructions
           tooltipState={this.props.tooltipState}
-          hasData={this.props.hasData}
+          showTooltip={this.state.showTooltip}
           rectWidth={_rectWidth}
           rectHeight={_rectHeight} />
       </div>

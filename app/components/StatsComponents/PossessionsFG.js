@@ -22,7 +22,7 @@ export default class PossessionsFG extends React.Component{
           {content}
         </div>
         <div className='stats-txt'>
-          End with Field Goal
+          FG Made for Team
         </div>
       </div>
     )

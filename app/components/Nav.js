@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import AboutModal from './ModalComponents/AboutModal';
+import $ from 'jquery';
 
 export default class Nav extends React.Component {
   constructor(props) {
@@ -17,6 +17,10 @@ export default class Nav extends React.Component {
     this.goToAbout = this.goToAbout.bind(this);
   }
 
+  componentDidMount() {
+
+  }
+
   handleMouseOver() {
     this.setState({highlight: true});
   }
@@ -30,7 +34,10 @@ export default class Nav extends React.Component {
   }
 
   goToAbout() {
-
+    this.handleMenuClick();
+    $('html, body').animate({
+      scrollTop: $( $('.about-section') ).offset().top
+    }, 500);
   }
 
   render() {
@@ -52,7 +59,7 @@ export default class Nav extends React.Component {
               </a>
               <ul className={dropdownStyle}>
                 <li className='nav-dropdown-item' onClick={this.goToAbout} >
-                  <a href='#about'>ABOUT</a>
+                  ABOUT
                 </li>
               </ul>
             </li>

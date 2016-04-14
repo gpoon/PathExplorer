@@ -6,7 +6,7 @@ import CanvasHTML5 from './CanvasHTML5';
 export default class Canvas extends React.Component{
   constructor(props) {
     super(props);
-    this._new = true;
+    this._new = this.props.tooltipState === 0;
     this._block = false;
 
     this.componentDidMount = this.componentDidMount.bind(this);
@@ -40,7 +40,6 @@ export default class Canvas extends React.Component{
   }
 
   render() {
-    console.log('canvas render')
     return (
       <canvas className='court-canvas' />
     );
