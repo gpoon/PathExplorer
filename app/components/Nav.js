@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import $ from 'jquery';
-
 export default class Nav extends React.Component {
   constructor(props) {
     super(props);
