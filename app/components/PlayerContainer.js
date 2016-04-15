@@ -52,7 +52,7 @@ export default class PlayerContainer extends React.Component{
   }
 
   getAllData(playerId) {
-    var path = 'http://s3-us-west-1.amazonaws.com/sportvucombined/' + playerId + '.json';
+    var path = 'https://s3-us-west-1.amazonaws.com/sportvucombined/' + playerId + '.json';
     d3_queue.queue()
       .defer(d3.json, path)
       .await(function(err, json) {
