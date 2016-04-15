@@ -21,7 +21,7 @@ rect.trav-box {
 
 .trav-box.tooltip-highlight,
 .court-grid:hover .trav-box.tooltip-highlight:hover  {
-  stroke: #FFD671;
+  stroke: #D85900;
   stroke-width: 3;
 }
 

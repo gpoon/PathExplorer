@@ -116,7 +116,7 @@
 }
 
 .offdef-tgl-btn {
-  border: 1px #979797 solid;
+  border: 1px rgba(255,255,255,0.81) solid;
   color: rgba(255,255,255,0.2);
   font: 1.07em/1 'Decima Bold';
   opacity: 0.9;
@@ -125,12 +125,12 @@
 }
 
 .offdef-tgl-btn:hover {
-  color: white;
+  color: #FFF;
   cursor: pointer;
 }
 
 .offdef-tgl-btn.tgl-selected {
-  background-color: rgba(255,255,255, 0.81);
+  background-color: rgba(255,255,255,0.81);
   color: #000;
   cursor: default;
 }

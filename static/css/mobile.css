@@ -30,7 +30,10 @@ body {
 
 .court-imgs {
   box-shadow: 0 0 50px 0px #1C4456;
-  max-height: 90vh;
+  max-height: -moz-calc(100vh - 100px);
+  max-height: -webkit-calc(100vh - 100px);
+  max-height: -o-calc(100vh - 100px);
+  max-height: calc(100vh - 100px);
   max-width: 100%;
 }
 
@@ -43,8 +46,10 @@ body {
 }
 
 .material-icons {
-  font-size: 36px;
+  -webkit-align-self: center;
   align-self: center;
+  font-size: 36px;
+  opacity: 0.81;
 }
 
 .top-arrow {
