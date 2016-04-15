@@ -35,12 +35,10 @@ module.exports = {
     path: path.join(__dirname, 'build'),
     filename: debug ? 'bundle.js' : 'bundle.min.js'
   },
-  plugins: [
-    // TODO: maybe we should be debug only
-    new BundleTracker({filename: './webpack-stats.json'})
-  ].concat( debug ? [] : [
+  plugins: debug ? [] : [
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
+    new BundleTracker({filename: './webpack-stats.json'}),
   ]),
 };
