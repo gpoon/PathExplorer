@@ -13,9 +13,10 @@ export default class OffDefToggleBtn extends React.Component{
 
   handleClick(e) {
     e.preventDefault();
-    this.props.toggleOffDef();
+    if (!this.props.selected)
+      this.props.toggleOffDef();
   }
-  
+
   render() {
     return (
       <span

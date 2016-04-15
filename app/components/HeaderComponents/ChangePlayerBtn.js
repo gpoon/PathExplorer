@@ -16,9 +16,13 @@ export default class ChangePlayerBtn extends React.Component{
     const classStr = this.props.selectNewPlayer ? ' selecting-player' : '';
     return (
       <div className='col-sm-3 change-player-container'>
-        <img
+        <span
           className={'change-player-btn' + classStr}
-          onClick={this.handleClick} />
+          onClick={this.handleClick}
+        >
+          <i className='material-icons'>search</i>
+          <span className='change-player-btn-txt'>SEARCH</span>
+        </span>
       </div>
     );
   }
