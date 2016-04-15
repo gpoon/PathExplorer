@@ -43,7 +43,7 @@ export default class ModalDialog extends React.Component{
         case 2:
           return (
             <div className='dialog-body'>
-              <p>Each line on the court is a player’s positions during <span className='decima-bold'>one possession</span>.</p>
+              <p>That line was where Steph Curry went during <span className='decima-bold'>one possession</span>.</p>
             </div>
           );
         case 4:

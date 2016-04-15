@@ -72,6 +72,12 @@ export default class About extends React.Component{
           <p>
             Contact me at gabrielhmpoon@gmail dot com or on <a href="https://www.linkedin.com/in/gabriel-poon-72a2a8a2" target="_blank">LinkedIn</a>.
           </p>
+          <div className='about-subheader help'>
+            I DON'T SEE ANY LINES ON THE COURT.
+          </div>
+          <p>
+            Are you using Internet Explorer? Try a different browser like Chrome or Firefox.
+          </p>
         </div>
         <div className='about-footer'>
           <button

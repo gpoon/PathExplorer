@@ -13,6 +13,7 @@ export default class Nav extends React.Component {
     this.handleMouseOut = this.handleMouseOut.bind(this);
     this.handleMenuClick = this.handleMenuClick.bind(this);
     this.goToAbout = this.goToAbout.bind(this);
+    this.goToHelp = this.goToHelp.bind(this);
   }
 
   handleMouseOver() {
@@ -31,6 +32,13 @@ export default class Nav extends React.Component {
     this.handleMenuClick();
     $('html, body').animate({
       scrollTop: $( $('.about-section') ).offset().top
+    }, 500);
+  }
+
+  goToHelp() {
+    this.handleMenuClick();
+    $('html, body').animate({
+      scrollTop: $( $('.help') ).offset().top
     }, 500);
   }
 
@@ -54,6 +62,9 @@ export default class Nav extends React.Component {
               <ul className={dropdownStyle}>
                 <li className='nav-dropdown-item' onClick={this.goToAbout} >
                   ABOUT
+                </li>
+                <li className='nav-dropdown-item' onClick={this.goToHelp} >
+                  HELP
                 </li>
               </ul>
             </li>
