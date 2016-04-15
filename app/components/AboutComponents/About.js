@@ -1,7 +1,5 @@
 import React from 'react';
 
-import $ from 'jquery';
-
 export default class About extends React.Component{
   constructor(props) {
     super(props);

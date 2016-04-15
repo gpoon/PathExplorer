@@ -35,7 +35,6 @@
     "d3-queue": "^2.0.3",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
-    "jquery": "^2.2.3",
     "lodash.filter": "^4.2.1",
     "lodash.isequal": "^4.1.1",
     "lunr": "^0.7.0",
