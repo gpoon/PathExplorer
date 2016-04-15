@@ -72,7 +72,7 @@ export default class About extends React.Component{
             Gabriel Poon. I am interested in Data Visualization, Machine Learning and Sports Analysis.
           </p>
           <p>
-            Contact me at gabrielhmpoon@gmail.com or on <a href="https://www.linkedin.com/in/gabriel-poon-72a2a8a2" target="_blank">LinkedIn</a>.
+            Contact me at gabe@gabrielpoon.com or on <a href="https://www.linkedin.com/in/gabriel-poon-72a2a8a2" target="_blank">LinkedIn</a>.
           </p>
         </div>
         <div className='about-footer'>

@@ -1,6 +1,7 @@
 var debug = process.env.NODE_ENV !== "production";
 var webpack = require('webpack');
 var path = require('path');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var BundleTracker = require('webpack-bundle-tracker');
 
 module.exports = {
@@ -18,8 +19,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loaders: ['style', 'css'],
-        include: path.join(__dirname, 'app')
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
       },
       {
         test: /\.jsx?$/,
@@ -38,9 +38,16 @@ module.exports = {
   },
   plugins: debug ? [
     new BundleTracker({filename: './webpack-stats.json'}),
+    new ExtractTextPlugin('[name].bundle.css'),
   ] : [
+    new ExtractTextPlugin('[name].bundle.min.css'),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
+    new webpack.optimize.UglifyJsPlugin({
+      mangle: {
+        except: ['$', 'd3', 'd3_queue', 'exports', 'require']
+      },
+      sourcemap: false
+    }),
   ],
 };

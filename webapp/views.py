@@ -8,11 +8,14 @@ def index(request):
     context = {}
 
     js_suffix = '.js' if settings.DEBUG else '.min.js'
+    css_suffix = '.css' if settings.DEBUG else '.min.css'
     user_agent = parse(request.META['HTTP_USER_AGENT'])
 
     if user_agent.is_pc:
         context['js_url'] = '/static/app.bundle' + js_suffix
+        context['css_url'] = '/static/app.bundle' + css_suffix
         return render(request, 'index.html', context)
     else:
         context['js_url'] = '/static/mobile.bundle' + js_suffix
+        context['css_url'] = '/static/mobile.bundle' + css_suffix
         return render(request, 'mobile.html', context)
