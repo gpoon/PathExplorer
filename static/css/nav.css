@@ -33,12 +33,13 @@
 }
 
 .navbar-nav .material-icons {
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .navbar-default .navbar-nav > li > a {
   color: #459ABB;
   opacity: .75;
+  padding: 11px 0 0 15px;
 }
 
 .navbar-default .navbar-nav > li:hover > a,
