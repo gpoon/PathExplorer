@@ -7,7 +7,8 @@ module.exports = {
   context: __dirname,
   devtool: debug ? "inline-sourcemap" : null,
   entry: {
-    app: "./app/main.js"
+    app: "./app/main.js",
+    mobile: "./app/mobile.js"
   },
   module: {
     loaders: [
@@ -33,7 +34,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, 'build'),
-    filename: debug ? 'bundle.js' : 'bundle.min.js'
+    filename: debug ? '[name].bundle.js' : '[name].bundle.min.js'
   },
   plugins: [
     // TODO: maybe we should be debug only

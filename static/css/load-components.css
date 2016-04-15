@@ -8,6 +8,12 @@
   transform-origin: center center;
 }
 
+@-webkit-keyframes rotate {
+ 100%{
+  transform: rotate(360deg);
+ }
+}
+
 @keyframes rotate {
  100%{
   transform: rotate(360deg);
@@ -19,6 +25,21 @@
   stroke: rgba(255,255,255,0.8);
   stroke-dasharray: 1,200;
   stroke-dashoffset: 0;
+}
+
+@-webkit-keyframes dash {
+ 0% {
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+ }
+ 50% {
+  stroke-dasharray: 89,200;
+  stroke-dashoffset: -35px;
+ }
+ 100% {
+  stroke-dasharray: 89,200;
+  stroke-dashoffset: -124px;
+ }
 }
 
 @keyframes dash {

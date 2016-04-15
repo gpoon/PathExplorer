@@ -1,1 +1,1 @@
-{"status":"done","chunks":{"app":[{"name":"bundle.js","path":"/Users/Poon/Code/PathExplorer/build/bundle.js"}]}}
+{"status":"done","chunks":{"app":[{"name":"app.bundle.js","path":"/Users/Poon/Code/PathExplorer/build/app.bundle.js"}],"mobile":[{"name":"mobile.bundle.js","path":"/Users/Poon/Code/PathExplorer/build/mobile.bundle.js"}]}}

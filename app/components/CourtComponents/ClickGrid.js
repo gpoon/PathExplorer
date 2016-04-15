@@ -27,8 +27,18 @@ export default class ClickGrid extends React.Component {
 
   rectClicked(x, y, shiftDown) {
     this.props.clickHandler(x, y, shiftDown);
-    if (this.props.tooltipState < 10) {
-      this.setState({showTooltip: false});
+    switch (this.props.tooltipState) {
+      case 3:
+        this.setState({showTooltip: false});
+        break;
+      case 5:
+      case 7:
+        if (shiftDown && x === 17 && y === 2) {
+          this.setState({showTooltip: false});
+        }
+        break;
+      default:
+        break;
     }
   }
 

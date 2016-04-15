@@ -17,10 +17,6 @@ export default class Nav extends React.Component {
     this.goToAbout = this.goToAbout.bind(this);
   }
 
-  componentDidMount() {
-
-  }
-
   handleMouseOver() {
     this.setState({highlight: true});
   }
