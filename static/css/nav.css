@@ -32,8 +32,8 @@
   cursor: default;
 }
 
-.nav .glyphicon-menu-hamburger:hover {
-  cursor: pointer;
+.navbar-nav .material-icons {
+  font-size: 20px;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -41,9 +41,10 @@
   opacity: .75;
 }
 
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
+.navbar-default .navbar-nav > li:hover > a,
+.navbar-default .navbar-nav > li:focus > a {
   color: #459ABB;
+  cursor: pointer;
   opacity: 1;
 }
 

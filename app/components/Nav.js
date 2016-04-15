@@ -51,7 +51,7 @@ export default class Nav extends React.Component {
           <ul className='nav navbar-nav navbar-left'>
             <li>
               <a onClick={this.handleMenuClick}>
-                <span className='glyphicon glyphicon-menu-hamburger' />
+                <i class="material-icons">menu</i>
               </a>
               <ul className={dropdownStyle}>
                 <li className='nav-dropdown-item' onClick={this.goToAbout} >
