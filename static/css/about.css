@@ -57,3 +57,8 @@
 .about-footer .about-close-btn:focus {
   outline: none;
 }
+
+.secret-img {
+  content: url(/static/imgs/horizontal-court.png);
+  display: none;
+}

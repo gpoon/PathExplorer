@@ -28,7 +28,7 @@ export default class About extends React.Component{
             WHAT DOES THIS SHOW?
           </div>
           <p>
-            The lines on the basketball court represent where one particular player/baskeball moved on every possessions from the first half of the season. Each line represents a player's position during a single possession he participated in. Offensive possessions are shown by default, but you can change what possessions are shown by interacting with the offense-defense toggle button, the court and search; specifics are covered in the next section.
+            The lines on the basketball court represent where one particular player/baskeball moved on every possession from the first half of the season. Each line represents a player's position during a single possession he participated in. Offensive possessions are shown by default, but you can change what possessions are shown by interacting with the offense-defense toggle button, the court and search; specifics are covered in the next section.
           </p>
           <p>
             There are a number of stats shown below the court.
@@ -87,6 +87,7 @@ export default class About extends React.Component{
             RETURN TO VISUALIZATION
           </button>
         </div>
+        <img className='secret-img' />
       </div>
     );
   }
