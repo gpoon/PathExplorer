@@ -51,7 +51,7 @@ export default class MobileApp extends React.Component{
             symbol='expand_less'
           />
           <div className='txt'>
-            Explore further and see other players on the real, interactive version using a desktop.
+            Explore further and see other players on the real, interactive version using a desktop/laptop.
           </div>
           <NavArrow
             destination='gif'
