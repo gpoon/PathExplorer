@@ -1,1 +1,1 @@
-{"status":"done","chunks":{"app":[{"name":"app.bundle.js","path":"/Users/Poon/Code/PathExplorer/build/app.bundle.js"}],"mobile":[{"name":"mobile.bundle.js","path":"/Users/Poon/Code/PathExplorer/build/mobile.bundle.js"}]}}
+{"status":"done","chunks":{"app":[{"name":"app.bundle.min.js","path":"/Users/Poon/Code/PathExplorer/build/app.bundle.min.js"}],"mobile":[{"name":"mobile.bundle.min.js","path":"/Users/Poon/Code/PathExplorer/build/mobile.bundle.min.js"}]}}
