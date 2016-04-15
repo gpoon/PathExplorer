@@ -10,10 +10,9 @@ export default class ModalOverlay extends React.Component{
   }
 
   handleClick() {
-    console.log('modal increment')
     this.props.incrementIntro();
   }
-  
+
   render() {
     const hide = (function() {
       switch (this.props.tooltipState) {

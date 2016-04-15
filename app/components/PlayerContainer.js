@@ -51,8 +51,8 @@ export default class PlayerContainer extends React.Component{
     return newP;
   }
 
-  getAllData() {
-    var path = '/static/data/201939.json';
+  getAllData(playerId) {
+    var path = 'http://s3-us-west-1.amazonaws.com/sportvucombined/' + playerId + '.json';
     d3_queue.queue()
       .defer(d3.json, path)
       .await(function(err, json) {
@@ -69,12 +69,12 @@ export default class PlayerContainer extends React.Component{
   }
 
   componentDidMount() {
-    this.getAllData();
+    this.getAllData(201939);
   }
 
-  triggerPlayerChange(player) {
-    this.setState({player: player, allData: null});
-    this.getAllData();
+  triggerPlayerChange(playerName, playerId) {
+    this.setState({player: playerName, allData: null});
+    this.getAllData(playerId);
   }
 
   handleTooltipClick(x, y, shiftDown) {
@@ -110,8 +110,6 @@ export default class PlayerContainer extends React.Component{
     } else {
       this.setState({tooltipState: curState + 1});
     }
-
-    console.log(curState);
   }
 
   render() {

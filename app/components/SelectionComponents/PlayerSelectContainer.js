@@ -58,7 +58,7 @@ export default class PlayerSelectContainer extends React.Component{
       this._lunrIndex.add({
         'id': i,
         'name': player.name,
-        'team': player.team
+        'team': player.team.join()
       });
       this._lunrStore[i] = player;
     }.bind(this));
@@ -91,8 +91,8 @@ export default class PlayerSelectContainer extends React.Component{
     this.setState({selectedPlayers: results});
   }
 
-  handlePlayerClick(playerName) {
-    this.props.triggerPlayerChange(playerName);
+  handlePlayerClick(playerName, playerId) {
+    this.props.triggerPlayerChange(playerName, playerId);
   }
 
   render() {

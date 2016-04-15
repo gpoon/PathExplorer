@@ -14,10 +14,13 @@ export default class SelectionContainer extends React.Component{
         }
 
         this.props.players.forEach(function(player) {
-          if (dict[player.team] !== undefined) {
-            dict[player.team].push(player);
-          } else {
-            dict[player.team] = [player];
+          for (var i = 0; i < player.team.length; i++) {
+            let team = player.team[i];
+            if (dict[team] !== undefined) {
+              dict[team].push(player);
+            } else {
+              dict[team] = [player];
+            }
           }
         });
         return dict;

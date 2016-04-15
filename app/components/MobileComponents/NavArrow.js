@@ -1,5 +1,4 @@
 import React from 'react';
-import $ from 'jquery';
 
 export default class NavArrow extends React.Component{
   constructor(props) {

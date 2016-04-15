@@ -35,7 +35,7 @@ export default class PathContainer extends React.Component{
     this.showPlayerChange = this.showPlayerChange.bind(this);
     this.handlePlayerChange = this.handlePlayerChange.bind(this);
   }
-  
+
   computeSelectedData() {
     this._selectedData = this.props.allData === null ? null : this.filterData();
   }
@@ -64,7 +64,7 @@ export default class PathContainer extends React.Component{
           this.addGridSel(coords);
         } else {
           this.removeGridSel(coords);
-        } 
+        }
       }
       this.props.handleTooltipClick(x, y, shiftDown);
     }
@@ -72,7 +72,7 @@ export default class PathContainer extends React.Component{
 
   addGridSel(coords) {
     var newGridSel = [coords].concat(this.state.gridSel);
-    this.setState({gridSel: newGridSel});  
+    this.setState({gridSel: newGridSel});
   }
 
   removeGridSel(coords) {
@@ -121,8 +121,8 @@ export default class PathContainer extends React.Component{
     this.setState({selectNewPlayer: !this.state.selectNewPlayer});
   }
 
-  handlePlayerChange(player) {
-    this.props.triggerPlayerChange(player);
+  handlePlayerChange(playerName, playerId) {
+    this.props.triggerPlayerChange(playerName, playerId);
     this.setState({selectNewPlayer: !this.state.selectNewPlayer, gridSel: []});
   }
 
@@ -134,7 +134,7 @@ export default class PathContainer extends React.Component{
           <PlayerSelectContainer
             triggerPlayerChange={this.handlePlayerChange}
             showPlayerChange={this.showPlayerChange}
-            width={this.props.width} 
+            width={this.props.width}
             height={this.props.width / 1.88} />
         );
       } else {
@@ -144,7 +144,7 @@ export default class PathContainer extends React.Component{
             gridClick={this.gridClick}
             selectedGrids={this.state.gridSel}
             onOffense={this.state.offDef == 'Off'}
-            width={this.props.width} 
+            width={this.props.width}
             height={this.props.width / 1.88}
             incrementIntro={this.props.incrementIntro}
             tooltipState={this.props.tooltipState} />

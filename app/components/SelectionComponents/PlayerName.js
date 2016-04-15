@@ -7,7 +7,7 @@ export default class PlayerName extends React.Component{
   }
 
   handleClick() {
-    this.props.playerClick(this.props.name);
+    this.props.playerClick(this.props.name, this.props.playerId);
   }
 
   render() {

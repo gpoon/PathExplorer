@@ -9,6 +9,7 @@ export default class TeamContainer extends React.Component{
         <PlayerName
           key={i}
           name={player.name}
+          playerId={player.id}
           playerClick={this.props.playerClick} />
       );
     }.bind(this));

@@ -39,7 +39,7 @@ body {
 }
 
 .gif-court {
-  content: url(/static/imgs/test.gif);
+  content: url(/static/imgs/gif-court.gif);
 }
 
 .material-icons {

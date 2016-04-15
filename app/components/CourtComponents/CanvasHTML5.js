@@ -31,8 +31,6 @@ export default class CanvasHTML5 {
   }
 
   drawFirst(data, callback) {
-    console.log('start draw')
-
     this._canvas.clearRect(0, 0, this._canvas.canvas.width, this._canvas.canvas.height);
     this._opacity = this._strokeOpacity(1);
     this._canvas.lineWidth = 2;
