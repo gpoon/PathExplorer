@@ -34,7 +34,7 @@ export default class About extends React.Component{
             There are a number of stats shown below the court.
           </p>
           <p>
-            You can see how many possessions (lines) are shown from the left-most number. Next to that, the percentage of (shown) possessions that resulted in a field goal regardless of who made it. Finally, a histogram of when the possessions happened during games, which can be a proxy for seeing when a player got his minutes during games.
+            You can see how many possessions (lines) are shown on the bottom left. Next to that, the percentage of (shown) possessions that resulted in a field goal regardless of who made it. Finally, a histogram of when the possessions happened during games, which can be a proxy for seeing when a player played during games.
           </p>
           <div className='about-subheader'>
             WHAT CAN I INTERACT WITH?
@@ -70,7 +70,7 @@ export default class About extends React.Component{
             Gabriel Poon. I am interested in Data Visualization, Machine Learning and Sports Analysis.
           </p>
           <p>
-            Contact me at gabrielhmpoon@gmail dot com or on <a href="https://www.linkedin.com/in/gabriel-poon-72a2a8a2" target="_blank">LinkedIn</a>.
+            Contact me at gabrielhmpoon at gmail dot com or on <a href="https://www.linkedin.com/in/gabriel-poon-72a2a8a2" target="_blank">LinkedIn</a>.
           </p>
           <div className='about-subheader help'>
             I DON'T SEE ANY LINES ON THE COURT.
