@@ -7,7 +7,7 @@ export default class CanvasHTML5 {
     this._canvas.canvas.height = height;
     this._strokeOpacity = d3.scale.pow().exponent(-0.35)
       .domain([10,1000])
-      .range([0.6, 0.04])
+      .range([0.6, 0.06])
       .clamp(true);
     this._allowUpdate = allowUpdate;
 

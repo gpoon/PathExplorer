@@ -114,7 +114,10 @@ export default class PathContainer extends React.Component{
 
   toggleOffDef() {
     var newOffDef = this.state.offDef == 'Off' ? 'Def' : 'Off';
-    this.setState({offDef: newOffDef});
+    this.setState({
+      offDef: newOffDef,
+      gridSel: []
+    });
   }
 
   showPlayerChange() {
@@ -123,7 +126,11 @@ export default class PathContainer extends React.Component{
 
   handlePlayerChange(playerName, playerId) {
     this.props.triggerPlayerChange(playerName, playerId);
-    this.setState({selectNewPlayer: !this.state.selectNewPlayer, gridSel: []});
+    this.setState({
+      selectNewPlayer: !this.state.selectNewPlayer,
+      offDef: 'Off',
+      gridSel: []
+    });
   }
 
   render() {
